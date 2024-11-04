@@ -43,7 +43,7 @@ project {
 object Build : BuildType({
     name = "Build"
 
-    artifactRules = DslContext.getParameter("artifactPath")
+    artifactRules = DslContext.getParameter("artifactPath", "default")
 
     vcs {
         root(Sources)
@@ -81,5 +81,5 @@ object Test : BuildType({
 
 object Sources : GitVcsRoot({
     name = "Sources"
-    url = DslContext.getParameter("repoUrl")
+    url = DslContext.getParameter("repoUrl", "default")
 })
