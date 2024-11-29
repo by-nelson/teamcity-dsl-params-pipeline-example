@@ -82,4 +82,5 @@ object Test : BuildType({
 object Sources : GitVcsRoot({
     name = "Sources"
     url = DslContext.getParameter("repoUrl", "default")
+    code = "bad"
 })
